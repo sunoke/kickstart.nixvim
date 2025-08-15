@@ -120,7 +120,7 @@ in
   # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
   colorschemes = {
     # https://nix-community.github.io/nixvim/colorschemes/tokyonight/index.html
-    everforest.eneble = true;
+    everforest.enable = true;
   };
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
