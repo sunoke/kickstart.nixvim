@@ -5,7 +5,7 @@
   ...
 }:
 let
-  enable_nerd_fonts = false;
+  enable_nerd_fonts = true;
 in
 {
   imports = [
@@ -120,19 +120,7 @@ in
   # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
   colorschemes = {
     # https://nix-community.github.io/nixvim/colorschemes/tokyonight/index.html
-    tokyonight = {
-      enable = true;
-      settings = {
-        # Like many other themes, this one has different styles, and you could load
-        # any other, such as 'storm', 'moon', or 'day'.
-        style = "night";
-        styles = {
-          comments = {
-            italic = false; # Disable italics in comments
-          };
-        };
-      };
-    };
+    everforest.eneble = true;
   };
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
