@@ -120,7 +120,8 @@ in
   # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
   colorschemes = {
     # https://nix-community.github.io/nixvim/colorschemes/tokyonight/index.html
-    everforest.enable = true;
+    # everforest.enable = true;
+    catppuccin.enable = true;
   };
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
@@ -332,7 +333,7 @@ in
         source = "if_many";
       };
       underline = {
-        severity.__raw = ''vim.diagnostic.severity.ERROR'';
+        severity.__raw = "vim.diagnostic.severity.ERROR";
       };
       signs.__raw = ''
         vim.g.have_nerd_font and {
