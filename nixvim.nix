@@ -20,6 +20,9 @@ in
     ./config/plugins/kickstart/mini.nix
     ./config/plugins/kickstart/treesitter.nix
 
+    # Custom plugins
+    ./config/plugins/custom/render-markdown.nix
+
     # NOTE: Add/Configure additional plugins for Kickstart.nixvim
     #
     #  Here are some example plugins that I've included in the Kickstart repository.
