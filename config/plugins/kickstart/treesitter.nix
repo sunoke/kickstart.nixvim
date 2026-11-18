@@ -12,8 +12,9 @@
       # Linux
       bash
       ssh_config
-      # sway
-      tmux
+      # tmux: parser was removed from nvim-treesitter main, so nixpkgs'
+      # builtGrammars no longer ships a `tmux` entry (it became an undefined
+      # variable and broke evaluation, Nov 2026).
 
       # Nix, Nixvim
       nix
@@ -66,6 +67,16 @@
       # svelte
     ];
 
+    # Nixvim's native indentation support — the legacy nvim-treesitter
+    # `settings.indent` module is deprecated on the main-branch rewrite.
+    # https://nix-community.github.io/nixvim/plugins/treesitter/index.html
+    indent = {
+      enable = true;
+      disable = [
+        "ruby"
+      ];
+    };
+
     settings = {
       # Installing tree-sitter grammars from nvim-treesitter
       # (can be combined with grammarPackages from Nixpkgs)
@@ -78,13 +89,6 @@
 
         # Some languages depend on vim's regex highlighting system for indent rules.
         additional_vim_regex_highlighting = [
-          "ruby"
-        ];
-      };
-
-      indent = {
-        enable = true;
-        disable = [
           "ruby"
         ];
       };
